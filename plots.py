@@ -26,7 +26,7 @@ st.pyplot(fig)
 
 st.subheader('Distribution using seaborn')
 fig = plt.figure(figsize=(15,8))
-sns.histplot(data = df, x = 'sepal_length')
+sns.displot(data = df, x = 'sepal_length')
 st.pyplot(fig)
 
 st.subheader('Multiple Graphs')
@@ -36,13 +36,13 @@ col1, col2 = st.columns(2)
 with col1:
     col1.subheader('KDE False')
     fig1 = plt.figure()
-    sns.histplot(data = df, x = 'sepal_length', kde= False)
+    sns.displot(data = df, x = 'sepal_length', kde= False)
     st.pyplot(fig1)
 
 with col2:
     col2.subheader('Hist False')
     fig2 = plt.figure()
-    sns.histplot(data = df, x = 'sepal_width', kde= True, hist= False)
+    sns.displot(data = df, x = 'sepal_width', kde= True, hist= False)
     st.pyplot(fig2)
 
 st.subheader('Changing the Styles')
@@ -52,13 +52,13 @@ with col1:
     sns.set_style('darkgrid')
     sns.set_context('notebook')
     fig1 = plt.figure(figsize=(5,5))
-    sns.histplot(data = df, x = 'sepal_length', kde= False)
+    sns.displot(data = df, x = 'sepal_length', kde= False)
     st.pyplot(fig1)
 
 with col2:
     sns.set_theme(context='poster', style='darkgrid')
     fig2 = plt.figure(figsize=(5,5))
-    sns.histplot(data = df, x = 'sepal_width', kde= True, hist= False)
+    sns.displot(data = df, x = 'sepal_width', kde= True, hist= False)
     st.pyplot(fig2)
     
 st.subheader('Scatter Plot')
