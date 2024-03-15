@@ -16,7 +16,7 @@ st.bar_chart(x)
 
 st.header('Visualization with Matplotlib and Seaborn')
 st.subheader('Loading the DataFrame')
-df = pd.read_csv("/csv/iris.csv")
+df = pd.read_csv("csv/iris.csv")
 st.dataframe(df)
 
 st.subheader('Distribution Plot')
