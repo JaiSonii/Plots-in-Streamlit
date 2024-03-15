@@ -24,42 +24,42 @@ fig = plt.figure(figsize=(15,8))
 df['variety'].value_counts().plot(kind='bar')
 st.pyplot(fig)
 
-st.subheader('Distribution using seaborn')
-fig = plt.figure(figsize=(15,8))
-sns.displot(data = df, x = 'sepal_length')
-st.pyplot(fig)
+# st.subheader('Distribution using seaborn')
+# fig = plt.figure(figsize=(15,8))
+# sns.displot(data = df, x = 'sepal_length')
+# st.pyplot(fig)
 
-st.subheader('Multiple Graphs')
+# st.subheader('Multiple Graphs')
 
-col1, col2 = st.columns(2)
+# col1, col2 = st.columns(2)
 
-with col1:
-    col1.subheader('KDE False')
-    fig1 = plt.figure()
-    sns.displot(data = df, x = 'sepal_length', kde= False)
-    st.pyplot(fig1)
+# with col1:
+#     col1.subheader('KDE False')
+#     fig1 = plt.figure()
+#     sns.displot(data = df, x = 'sepal_length', kde= False)
+#     st.pyplot(fig1)
 
-with col2:
-    col2.subheader('Hist False')
-    fig2 = plt.figure()
-    sns.displot(data = df, x = 'sepal_width', kde= True, hist= False)
-    st.pyplot(fig2)
+# with col2:
+#     col2.subheader('Hist False')
+#     fig2 = plt.figure()
+#     sns.displot(data = df, x = 'sepal_width', kde= True, hist= False)
+#     st.pyplot(fig2)
 
-st.subheader('Changing the Styles')
-col1, col2 = st.columns(2)
+# st.subheader('Changing the Styles')
+# col1, col2 = st.columns(2)
 
-with col1:
-    sns.set_style('darkgrid')
-    sns.set_context('notebook')
-    fig1 = plt.figure(figsize=(5,5))
-    sns.displot(data = df, x = 'sepal_length', kde= False)
-    st.pyplot(fig1)
+# with col1:
+#     sns.set_style('darkgrid')
+#     sns.set_context('notebook')
+#     fig1 = plt.figure(figsize=(5,5))
+#     sns.displot(data = df, x = 'sepal_length', kde= False)
+#     st.pyplot(fig1)
 
-with col2:
-    sns.set_theme(context='poster', style='darkgrid')
-    fig2 = plt.figure(figsize=(5,5))
-    sns.displot(data = df, x = 'sepal_width', kde= True, hist= False)
-    st.pyplot(fig2)
+# with col2:
+#     sns.set_theme(context='poster', style='darkgrid')
+#     fig2 = plt.figure(figsize=(5,5))
+#     sns.displot(data = df, x = 'sepal_width', kde= True, hist= False)
+#     st.pyplot(fig2)
     
 st.subheader('Scatter Plot')
 
