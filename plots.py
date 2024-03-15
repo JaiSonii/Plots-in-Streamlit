@@ -67,7 +67,7 @@ fig,ax = plt.subplots(figsize=(15,8))
 ax.scatter(*np.random.random(size=(2,100)))
 st.pyplot(fig)
 
-df = pd.read_csv('C:\Machine Learning\data toolkit\Streamlit\csv\iris.csv')
+df = pd.read_csv('csv/iris.csv')
 st.subheader('Count Plot')
 fig = plt.figure(figsize = (15,8))
 sns.countplot(data  = df, x = 'variety')
